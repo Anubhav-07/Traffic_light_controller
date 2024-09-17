@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description: 
+// Description: Testbench for Traffic Light Controller
 // 
 // Dependencies: 
 // 
@@ -25,6 +25,8 @@ module Traffic_Light_Controller_TB;
     wire [2:0] light_S;
     wire [2:0] light_MT;
     wire [2:0] light_M2;
+    wire [2:0] ps;  // Added ps for debugging
+    wire [3:0] count; // Added count for debugging
 
     // Instantiate DUT (Device Under Test)
     Traffic_Light_Controller dut (
@@ -33,7 +35,9 @@ module Traffic_Light_Controller_TB;
         .light_M1(light_M1),
         .light_S(light_S),
         .light_M2(light_M2),
-        .light_MT(light_MT)
+        .light_MT(light_MT),
+        .ps(ps),  // Connect ps to monitor
+        .count(count) // Connect count to monitor
     );
 
     // Clock generation (1ns period for faster simulation)
@@ -46,9 +50,8 @@ module Traffic_Light_Controller_TB;
     initial begin
         // Test reset functionality
         rst = 1;
-        #10; // 10 time units for reset
+        #20; // 20 time units for reset
         rst = 0;
-        
         // Let the simulation run for 2000 time units
         #2000;
         $finish;

@@ -1,0 +1,65 @@
+$date
+   Tue Sep 17 16:57:24 2024
+$end
+$version
+  2018.2
+$end
+$timescale
+  1ps
+$end
+$scope module Traffic_Light_Controller_TB $end
+$var reg 1 ! clk $end
+$var reg 1 " rst $end
+$var wire 3 # light_M1 [2:0] $end
+$var wire 3 $ light_S [2:0] $end
+$var wire 3 % light_MT [2:0] $end
+$var wire 3 & light_M2 [2:0] $end
+$scope module dut $end
+$var wire 1 ' clk $end
+$var wire 1 ( rst $end
+$var reg 3 ) light_M1 [2:0] $end
+$var reg 3 * light_S [2:0] $end
+$var reg 3 + light_MT [2:0] $end
+$var reg 3 , light_M2 [2:0] $end
+$var reg 3 - ps [2:0] $end
+$var reg 4 . count [3:0] $end
+$var parameter 32 / S1 [31:0] $end
+$var parameter 32 0 S2 [31:0] $end
+$var parameter 32 1 S3 [31:0] $end
+$var parameter 32 2 S4 [31:0] $end
+$var parameter 32 3 S5 [31:0] $end
+$var parameter 32 4 S6 [31:0] $end
+$var parameter 32 5 sec7 [31:0] $end
+$var parameter 32 6 sec5 [31:0] $end
+$var parameter 32 7 sec2 [31:0] $end
+$var parameter 32 8 sec3 [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+bx #
+bx $
+bx %
+bx &
+0'
+0(
+bx )
+bx *
+bx +
+bx ,
+bx -
+bx .
+b0 /
+b1 0
+b10 1
+b11 2
+b100 3
+b101 4
+b111 5
+b101 6
+b10 7
+b11 8
+$end
